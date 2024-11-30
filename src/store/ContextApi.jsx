@@ -8,7 +8,7 @@ const ContextApi = createContext();
 export const ContextProvider = ({ children }) => {
 
   const getToken = localStorage.getItem("JWT_TOKEN") ? JSON.stringify(localStorage.getItem("JWT_TOKEN")) : null;
-  const isADmin = localStorage.getItem("IS_ADMIN") ? JSON.stringify(localStorage.getItem("IS_ADMIN")): false;
+  const isADmin = localStorage.getItem("IS_ADMIN") ? JSON.stringify(localStorage.getItem("IS_ADMIN")) : false;
   const [token, setToken] = useState(getToken);
   const [currentUser, setCurrentUser] = useState(null);
   const [openSidebar, setOpenSidebar] = useState(true)
