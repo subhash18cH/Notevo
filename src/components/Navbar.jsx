@@ -28,9 +28,7 @@ const Navbar = () => {
   return (
     <header className='h-[72px] z-50 bg-yellow-100 flex items-center top-0 shadow-sm sticky'>
       <nav className="px-4 sm:px-10 flex justify-between items-center h-full w-full">
-        <Link to={"/"}>
-       <h1 className='font-bold text-2xl text-purple-800'>Notevo</h1>
-        </Link>
+        <h1 className='font-bold text-2xl text-purple-800'>Notevo</h1>
         <ul
           className={`lg:static  absolute left-0  top-16 w-full lg:w-fit lg:px-0 sm:px-10 px-4  lg:bg-transparent bg-yellow-100 ${headerToggle ? "min-h-fit max-h-navbarHeight lg:py-0 py-4 shadow-md shadow-slate-700 lg:shadow-none" : "h-0 overflow-hidden "} lg:h-auto transition-all duration-100 font-montserrat text-textColor flex lg:flex-row flex-col lg:gap-8 gap-2`}
         >

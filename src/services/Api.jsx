@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: `http://localhost:8080/api`,
+  baseURL: `${import.meta.env.VITE_BACKURL}`,
   headers: {
     "Content-Type": "application/json",
     Accept: "application/json",
@@ -20,7 +20,7 @@ api.interceptors.request.use(
     if (!csrfToken) {
       try {
         const response = await axios.get(
-          `http://localhost:8080/api/api/csrf-token`,
+          `${import.meta.env.VITE_BACKURL}/csrf-token`,
           { withCredentials: true }
         );
         csrfToken = response.data.token;
